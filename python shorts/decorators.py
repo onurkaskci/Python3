@@ -1,3 +1,4 @@
+
 def first_function(func):
   def wrapper(*args):
     received_value = func(*args)
