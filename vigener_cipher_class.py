@@ -41,7 +41,8 @@ class VigenereCipher(object):
             generated_key_final = ''.join(generated_key_list)[:len(message)]
 
             return generated_key_final
-
+        
+        # gets the generated keys from the function above
         generated_keys = generate_key(message,key)
 
         ciphered_alphabets = []
@@ -129,5 +130,5 @@ class VigenereCipher(object):
 
 c = VigenereCipher('ismo', 'abcdefghijklmnopqrstuvwxyz')
 
-print(c.encode(''))
+print(c.encode('subscribe to the channel, this message will destroy itself in ten seconds'))
 print(c.decode(''))
