@@ -31,4 +31,4 @@ elapsed_time_normal = end_time_normal - start_time_normal
 # Multiple the seconds by 1000 to get milliseconds
 print(f"Elapsed time for Generator: {elapsed_time_gen:.6f} seconds") 
 print(f"Elapsed time for Return: {elapsed_time_normal:.6f} seconds")
-print(f'Generator function was {(elapsed_time_normal-elapsed_time_gen)*1000:.0f} (milli)seconds faster!')
+print(f'Generator was {(elapsed_time_normal-elapsed_time_gen)*1000:.0f} (milli)seconds faster!')
