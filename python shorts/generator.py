@@ -1,4 +1,3 @@
-import time
 import sys
 
 def count_up_to(max):
@@ -15,5 +14,5 @@ def count_up_to_list(max):
         count += 1
     return count_list
 
-print(f'Generator: {sys.getsizeof(count_up_to(1000000))} bytes')
-print(f'Regular: {sys.getsizeof(count_up_to_list(1000000))} bytes')
+print(f'Memory Used by Generator: {sys.getsizeof(count_up_to(1000000))} bytes')
+print(f'Memory Used by Regular: {sys.getsizeof(count_up_to_list(1000000))} bytes')
