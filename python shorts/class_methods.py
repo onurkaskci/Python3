@@ -9,3 +9,9 @@ class Circle:
     def area(self):
         return 3.14 * self.radius * self.radius
 
+circle = Circle(3)
+
+print(f'Circumference: {round(circle.circumference())}')
+
+# Call the area method
+print(f'Area: {round(circle.area())}')
