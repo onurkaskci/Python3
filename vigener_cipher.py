@@ -24,30 +24,27 @@ def generate_key(message, key, alphabet='abcdefghijklmnopqrstuvwxyz'):
         generated_key_list.insert(char, ' ')
 
     generated_key_final = ''.join(generated_key_list)[:len(message)]
-    # YOUTUBE 3: So here we have the key for the inputted message. This key will be used for both encrypting and decrypting.
+    # YOUTUBE 3: So here we have the key for the inputted message. This key will be used for both encrypting and decrypting. (make an image for comparing the inputted text and the output key)
     return generated_key_final
 
+# YOUTUBE 4: Next i'm gonna create function for encrypting.
 def encrypt(message_to_encrypt, key='password', alphabet='abcdefghijklmnopqrstuvwxyz'):
     
-    #THE PROBLEM IS WITH THE GENERATED KEYS
-    #MAKE THE KEY SKIP AND NOT GENERATE FOR THE SPACES IN THE MESSAGE
-    message = message_to_encrypt #i am onur and this is ismo
-
-    ###### NEW FUNCTION FOR GENERATING KEYWORDS (this section works fine)
-
-    generated_keys = generate_key(message,key, alphabet)
+    # YOUTUBE 5: Here we call the generate_key function to create a key for the input. In this case the input is the message that the user wants to encrypt.
+    generated_keys = generate_key(message_to_encrypt,key, alphabet)
     print(f'Generate Key function call in encrypt: {generated_keys}')
 
     ciphered_alphabets = []
 
-    #Creates the ciphered alphabet for each character in the generated keyword
+    # YOUTUBE 6: And in this for loop we create 'Caeser Ciphers' for every individual letter in the 'generated_key'. (Make an image animation for this part as well) --Creates the ciphered alphabet for each character in the generated keyword--
     for letter in generated_keys:
         if letter in alphabet:
             ciphered_alphabets.append(alphabet[alphabet.find(letter):] + alphabet[:alphabet.find(letter)])
         else:
             ciphered_alphabets.append(' ')
 
-    message_list = [x for x in message]
+
+    message_list = [x for x in message_to_encrypt]
     
     #every character of the message is matched with the corresponding ciphered_alphabets
     message_alphabet_combined_list = []
@@ -57,12 +54,14 @@ def encrypt(message_to_encrypt, key='password', alphabet='abcdefghijklmnopqrstuv
     encrypted_elements = []
 
     #encrypting part NEW
+    # YOUTUBE 7: Finally we match the letters in the input with the corresponding letters in the 'Ciphered Alphabet' for encrypting. But if the current element is not a letter, we keep the original. So things like space, comma or question mark will remain as it is.
     for element in message_alphabet_combined_list:
         if element[0] in alphabet:
             encrypted_elements.append(element[1][alphabet.find(element[0])])
         else:
             encrypted_elements.append(element[0])
 
+    # YOUTUBE 8: Until this point our letters are stored in a list.
     final_ciphered_message = ''.join(encrypted_elements)
     return final_ciphered_message
 
