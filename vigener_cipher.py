@@ -1,6 +1,6 @@
 from pprint import pprint
 
-# YOUTUBE 1: this function generates the key at the length of the inputted message. Example with the key 'like' -> subscribe to my channel: likelikel ik el ikelike
+# YOUTUBE 1: So first we need a function that generates the key at the length of the inputted message. Example with the key 'like' -> subscribe to my channel: likelikel ik el ikelike
 def generate_key(message, key, alphabet='abcdefghijklmnopqrstuvwxyz'):
     generated_key = ''
     while len(generated_key) <= len(message):
