@@ -1,6 +1,6 @@
-f = lambda x: x + 1
-g = lambda x: x * 2
-h = lambda x: x ** 2
+f = lambda x: x + 1 # 200 -> 201
+g = lambda x: x * 2 # 100 -> 200
+h = lambda x: x ** 2 # 10 -> 100
 
 x = 10
 print(f(g(h(x))))
