@@ -1,8 +1,8 @@
 
 try:
     odd_numbers = [1,3,5,9]
-    #print(odd_numbers[3]/0)
-    print(odd_numbers[4])
+    print(odd_numbers[3]/0)
+    #print(odd_numbers[4])
 
 except ZeroDivisionError:
     print('Bad News: Cant divide by zero')
